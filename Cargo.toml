@@ -1,5 +1,6 @@
 [package]
 name = "odrive_can"
+description = "A no_std driver for ODrive compatible motor controllers over CAN"
 version = "0.1.0"
 authors = ["Martti Leppänen <tstm@softcon.fi>"]
 edition = "2021"
