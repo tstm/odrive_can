@@ -10,7 +10,7 @@ use esp_hal::{
 use crate::odrive_errors::ODriveError;
 
 // Command codes from ODrive CAN protocol documentation
-// https://docs.odriverobotics.com/v/latest/manual/can-protocol.html#can-msg-get-error
+// <https://docs.odriverobotics.com/v/latest/manual/can-protocol.html#can-msg-get-error>
 
 /// Command code for getting version information
 const GET_VERSION: u8 = 0x00;
@@ -34,7 +34,7 @@ const RXSDO: u8 = 0x04;
 const TXSDO: u8 = 0x05;
 // const ADDRESS: u8 = 0x06; // TODO: Implement address setting
 // Only for SteadyWin GIM6010-8
-// Use the MIT protocol for movement https://github.com/mit-biomimetics/Cheetah-Software
+// Use the MIT protocol for movement <https://github.com/mit-biomimetics/Cheetah-Software>
 // const SET_INPUT_MIT: u8 = 0x08; // TODO: Implement MIT inputs
 const SET_INPUT_VEL: u8 = 0x0d;
 const SET_INPUT_TORQUE: u8 = 0x0e;
@@ -604,7 +604,7 @@ impl<'a> ODriveCanController<'a, Async> {
     }
 
     /// Sets the absolute position of the ODrive asynchronously
-    /// See: https://docs.odriverobotics.com/v/latest/manual/control.html#user-reference-frame
+    /// See: <https://docs.odriverobotics.com/v/latest/manual/control.html#user-reference-frame>
     ///
     /// # Arguments
     /// * `pos_estimate` - The absolute position in f32
@@ -997,7 +997,7 @@ impl<'a> ODriveCanController<'a, Blocking> {
     }
 
     /// Sets the absolute position of the ODrive
-    /// See: https://docs.odriverobotics.com/v/latest/manual/control.html#user-reference-frame
+    /// See: <https://docs.odriverobotics.com/v/latest/manual/control.html#user-reference-frame>
     ///
     /// # Arguments
     /// * `pos_estimate` - The absolute position in f32
