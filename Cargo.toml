@@ -5,15 +5,26 @@ version = "0.1.0"
 authors = ["Martti Leppänen <tstm@softcon.fi>"]
 edition = "2021"
 license = "MIT OR Apache-2.0"
-license-file = "LICENSE-APACHE"
 keywords = ["embedded", "odrive", "esp32", "twai", "can"]
 categories = ["embedded", "hardware-support", "no-std"]
 repository = "https://github.com/tstm/odrive_can"
 
+[package.metadata.docs.rs]
+default-target = "riscv32imac-unknown-none-elf"
+features       = ["esp32c6"]
+rustdoc-args   = ["--cfg", "docsrs"]
+
 [dependencies]
-esp-hal = { version = "1.0.0-beta.0", features = [ "esp32s3", "unstable" ] }
+# esp-hal = { version = "1.0.0-beta.0", features = [ "esp32s3", "unstable" ] }
 embedded-can = {version = "0.4.1"}
 nb = { version = "1.1.0", features = [] }
+
+[target.'cfg(target_arch = "riscv32")'.dependencies]
+esp-hal = { version = "1.0.0-beta.0", features = [ "esp32c6", "unstable" ] }
+riscv            = { version = "0.12.1" }
+
+[target.'cfg(target_arch = "xtensa")'.dependencies]
+esp-hal = { version = "1.0.0-beta.0", features = [ "esp32s3", "unstable" ] }
 
 [profile.release]
 codegen-units = 1 # LLVM can perform better optimizations using a single thread

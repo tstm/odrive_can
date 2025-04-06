@@ -371,6 +371,7 @@ dependencies = [
  "esp-metadata",
  "esp-riscv-rt",
  "esp-synopsys-usb-otg",
+ "esp32c6",
  "esp32s3",
  "fugit",
  "instability",
@@ -438,6 +439,16 @@ dependencies = [
  "embedded-hal 0.2.7",
  "ral-registers",
  "usb-device",
+ "vcell",
+]
+
+[[package]]
+name = "esp32c6"
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ff2a4e1d1b0cb2517af20766004b8e8fb4612043f0b0569703cc90d1880ede4"
+dependencies = [
+ "critical-section",
  "vcell",
 ]
 
@@ -632,6 +643,7 @@ dependencies = [
  "embedded-can",
  "esp-hal",
  "nb 1.1.0",
+ "riscv",
 ]
 
 [[package]]
