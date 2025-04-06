@@ -7,7 +7,7 @@ pub struct ODriveError {
 
 impl ODriveError {
     /// Documentation from
-    /// https://docs.odriverobotics.com/v/latest/fibre_types/com_odriverobotics_ODrive.html#ODrive.Error
+    /// <https://docs.odriverobotics.com/v/latest/fibre_types/com_odriverobotics_ODrive.html#ODrive.Error>
     pub const INITIALIZING: Self = Self { bits: 0x1 };
     pub const SYSTEM_LEVEL: Self = Self { bits: 0x2 };
     pub const TIMING_ERROR: Self = Self { bits: 0x4 };
